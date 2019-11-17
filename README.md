@@ -5,7 +5,7 @@
 [![Travis Build](https://travis-ci.com/testmonitor/laravel-nested-migrations.svg?branch=master)](https://travis-ci.com/testmonitor/laravel-nested-migrations)
 [![Code Quality](https://scrutinizer-ci.com/g/testmonitor/laravel-nested-migrations/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/testmonitor/laravel-nested-migrations/?branch=master)
 [![StyleCI](https://styleci.io/repos/222276101/shield)](https://styleci.io/repos/222276101)
-[![License](https://poser.pugx.org/testmonitor/laravel-nested-migrations/license)](https://packagist.org/packages/laravel-nested-migrations)
+[![License](https://poser.pugx.org/testmonitor/laravel-nested-migrations/license)](https://packagist.org/packages/testmonitor/laravel-nested-migrations)
 
 With Nested Migrations, you can organize your migration files into subfolders, keeping things a bit cleaner. 
 
