@@ -2,8 +2,6 @@
 
 namespace TestMonitor\NestedMigrations\Tests;
 
-use TestMonitor\NestedMigrations\MigrationServiceProvider;
-
 class NestedMigrationTest extends TestCase
 {
     /**
