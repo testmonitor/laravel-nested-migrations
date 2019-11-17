@@ -1,0 +1,8 @@
+composer.lock
+vendor
+build
+
+.phpunit.result.cache
+
+.idea/
+.idea_modules/

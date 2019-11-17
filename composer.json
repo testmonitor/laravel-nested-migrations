@@ -1,0 +1,68 @@
+{
+    "name": "testmonitor/laravel-nested-migrations",
+    "description": "Organize Laravel migration files into subfolders",
+    "type": "library",
+    "keywords":
+    [
+        "testmonitor",
+        "nested",
+        "migration",
+        "folder",
+        "path",
+        "recursive"
+    ],
+    "authors": [
+        {
+            "name": "Thijs Kok",
+            "email": "tkok@testmonitor.com",
+            "homepage": "https://www.testmonitor.com/",
+            "role": "Lead Developer"
+        },
+        {
+            "name": "Stephan Grootveld",
+            "email": "sgrootveld@testmonitor.com",
+            "homepage": "https://www.testmonitor.com/",
+            "role": "Developer"
+        },
+        {
+            "name": "Frank Keulen",
+            "email": "fkeulen@testmonitor.com",
+            "homepage": "https://www.testmonitor.com/",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0",
+        "illuminate/database": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0",
+        "illuminate/contracts": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0",
+        "squizlabs/php_codesniffer": "2.*",
+        "orchestra/testbench": "~3.8.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TestMonitor\\NestedMigrations\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TestMonitor\\NestedMigrations\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TestMonitor\\NestedMigrations\\MigrationServiceProvider"
+            ]
+        }
+    },
+
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "license": "MIT"
+}
