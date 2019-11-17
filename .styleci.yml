@@ -3,3 +3,7 @@ preset: laravel
 enabled:
     - length_ordered_imports
     - concat_with_spaces
+
+disabled:
+    - alpha_ordered_imports
+    - concat_without_spaces
