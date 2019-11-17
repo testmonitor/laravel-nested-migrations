@@ -32,10 +32,39 @@ The package will automatically register itself.
 
 ## Usage
 
-Once loaded, there is nothing else to do. Yeah!
+Once loaded, you can start organizing your migration files into folders. You might want to take a look at 
+the [examples](#examples) section.
+
+Please note that nesting is limited to **one level deep**. This avoids any recursive mess.
 
 ## Examples
 
+Imagine a migration file layout like this:
+
+```
+ database/migrations/
+    - 2018_09_01_180000_create_projects_table.php
+    - 2018_11_11_180000_create_users_table.php
+    - 2019_01_20_180000_create_settings_table.php
+    - 2019_11_12_180000_create_teams_table.php
+```
+
+Nothing out of the ordinary, right? But what if this list gets bigger? Like a 100 migration
+files? Things tend to get difficult at that stage. Usually, you end up organizing those files
+in folders, and that's exactly where this package comes in. Now, you can do this:
+
+```
+ database/migrations/1.0
+    - 2018_09_01_180000_create_projects_table.php
+    - 2018_11_11_180000_create_users_table.php
+
+ database/migrations/1.1
+    - 2019_01_20_180000_create_settings_table.php
+
+ database/migrations/2.0
+    - 2019_11_12_180000_create_teams_table.php
+```
+ 
 ## Tests
 
 The package contains integration tests. You can run them using PHPUnit.
