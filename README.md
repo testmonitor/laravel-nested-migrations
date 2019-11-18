@@ -33,7 +33,7 @@ The package will automatically register itself.
 ## Usage
 
 Once loaded, you can start organizing your migration files into folders. You might want to take a look at 
-the [examples](#examples) section.
+the [examples](#examples) section to get a better picture.
 
 Please note that nesting is limited to **one level deep**. This avoids any recursive mess.
 
@@ -50,8 +50,10 @@ Imagine a migration file layout like this:
 ```
 
 Nothing out of the ordinary, right? But what if this list gets bigger? Like a 100 migration
-files? Things tend to get difficult at that stage. Usually, you end up organizing those files
-in folders, and that's exactly where this package comes in. Now, you can do this:
+files? Things tend to get difficult at that stage. Usually, you'd want to categorize these
+files into folders and that's exactly where this package comes in. 
+
+Now, you can do this:
 
 ```
  database/migrations/1.0
@@ -64,6 +66,10 @@ in folders, and that's exactly where this package comes in. Now, you can do this
  database/migrations/2.0
     - 2019_11_12_180000_create_teams_table.php
 ```
+
+A version-based migration folder layout is a great way to handle bigger apps, but you can use
+any name or number you'd like. Just keep in mind that the folders are sorted alphanumerically
+and migration files are ran through accordingly. 
  
 ## Tests
 
