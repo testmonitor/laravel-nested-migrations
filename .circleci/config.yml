@@ -5,7 +5,7 @@ jobs:
     working_directory: ~/testmonitor/laravel-nested-migrations
 
     docker:
-      - image: circleci/php:7.2-browsers
+      - image: circleci/php:7.3-browsers
 
     steps:
       - run:
