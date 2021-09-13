@@ -30,7 +30,6 @@ class Migrator extends IlluminateMigrator
      * Finds migration files recursively, limited to one level.
      *
      * @param string $path
-     *
      * @return array
      */
     protected function findMigrationFiles($path)
