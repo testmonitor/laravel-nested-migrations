@@ -54,8 +54,16 @@ jobs:
 
         docker:
             - image: cimg/php:8.0-node
+              environment:
+                  APP_ENV: testing
+            - image: nouchka/sqlite3
 
         steps:
+            -   run:
+                    name: Install System Dependencies
+                    command: |
+                        sudo apt-get update
+                        sudo apt-get install -y php8.0-sqlite3
             - attach_workspace:
                   at: .
             - run:
