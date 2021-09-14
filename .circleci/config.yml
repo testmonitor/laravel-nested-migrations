@@ -54,8 +54,6 @@ jobs:
 
         docker:
             - image: cimg/php:8.0-node
-              environment:
-                  APP_ENV: testing
             - image: nouchka/sqlite3
 
         steps:
