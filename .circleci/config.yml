@@ -58,7 +58,7 @@ jobs:
         steps:
             - run:
                 sudo apt-get update && \
-                sudo apt-get -yq --no-install-recommends install sqlite3=3.* && \
+                apt-get -yq --no-install-recommends install sqlite3=3.* && \
                 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
                 mkdir -p /root/db
 
