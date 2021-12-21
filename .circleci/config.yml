@@ -61,7 +61,7 @@ jobs:
                   command: |
                       sudo pear config-set php_ini /etc/php.d/circleci.ini
                       sudo pecl update-channels
-                      sudo pecl install sqlite3
+                      sudo pecl install sqlite3-0.6
                       sudo pecl install php8.0-sqlite3
             - attach_workspace:
                   at: .
