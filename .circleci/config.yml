@@ -63,7 +63,7 @@ jobs:
                         sudo apt-get install -y sqlite3 libsqlite3-dev
                         sudo pear config-set php_ini /etc/php.d/circleci.ini
                         sudo pecl update-channels
-                        sudo pecl install sqlite3-0.6
+                        echo '' | sudo pecl install sqlite3-0.6
             - attach_workspace:
                   at: .
             - run:
