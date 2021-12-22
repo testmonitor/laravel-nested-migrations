@@ -5,7 +5,7 @@ jobs:
         working_directory: ~/testmonitor/laravel-nested-migrations
 
         docker:
-            - image: cimg/php:8.0-node
+            - image: cimg/php:8.0
 
         steps:
             - run:
@@ -24,7 +24,7 @@ jobs:
         working_directory: ~/testmonitor/laravel-nested-migrations
 
         docker:
-            - image: cimg/php:8.0-node
+            - image: cimg/php:8.0
 
         steps:
             - attach_workspace:
@@ -53,22 +53,27 @@ jobs:
         working_directory: ~/testmonitor/laravel-nested-migrations
 
         docker:
-            - image: cimg/php:8.0-node
+            - image: cimg/php:8.0
 
         steps:
-            - attach_workspace:
-                  at: .
             - run:
-                  name: Run Unit Tests
-                  command: |
-                      mkdir -p ./logs/phpunit
-                      vendor/bin/phpunit -d memory_limit=1G --printer "\PHPUnit\TextUI\DefaultResultPrinter" --log-junit logs/phpunit/junit.xml --testdox-html logs/phpunit/testdox.html
+                name: Install System Dependencies
+                command: |
+                    sudo apt-get update
+                    sudo apt-get install -y sqlite3 libsqlite3-dev
+            - attach_workspace:
+                at: .
+            - run:
+                name: Run Unit Tests
+                command: |
+                  mkdir -p ./logs/phpunit
+                  vendor/bin/phpunit -d memory_limit=1G --printer "\PHPUnit\TextUI\DefaultResultPrinter" --log-junit logs/phpunit/junit.xml --testdox-html logs/phpunit/testdox.html
 
             - store_artifacts:
-                  path: ./logs/phpunit
-                  destination: phpunit
+                path: ./logs/phpunit
+                destination: phpunit
             - store_test_results:
-                  path: ./logs
+                path: ./logs
 
 workflows:
     version: 2
